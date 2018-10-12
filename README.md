@@ -61,7 +61,7 @@
 		[<building_object>] call LSS_fnc_spawn_loot_inBulding;
 
 		Returns:
-		the objected where the loot was created
+		the building object where the loot was created
 
 		Notes:
 		Generates loot based on a given building object			
