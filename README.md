@@ -20,6 +20,7 @@
 	lootsystem\config.cpp
 	
 -Functions:
+	
 	LSS_fnc_cleanup
 	
 		Usage:
