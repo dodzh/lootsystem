@@ -8,6 +8,8 @@ private["_lootInterval","_spawnAtStart","_spawnRange","_maxPleyerSpeed","_cfgLoo
 
 try
 {
+	if (!isServer) exitWith {};
+
 	_cfgLootSettings = missionConfigFile >> "CfgLootSettings";
 	if (isNil "_cfgLootSettings") then {throw "invalid settings";};
 	if !(isClass _cfgLootSettings) then {throw "invalid settings";};

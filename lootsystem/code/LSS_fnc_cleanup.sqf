@@ -7,6 +7,8 @@
 private["_maxLootTime","_buildingsWithExpiredLoot","_helper","_lootContainerNetIDs","_lootContainer","_cfgLootSettings","_debugHelpersIDs","_debugMarkers"];
 try
 {
+	if (!isServer) exitWith {};
+
 	_cfgLootSettings = missionConfigFile >> "CfgLootSettings";
 	if (isNil "_cfgLootSettings") then {throw "invalid settings";};
 	if !(isClass _cfgLootSettings) then {throw "invalid settings";};

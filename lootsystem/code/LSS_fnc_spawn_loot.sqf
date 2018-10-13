@@ -11,6 +11,8 @@ _pos = _this select 0;
 _range = _this select 1;
 try
 {
+	if (!isServer) exitWith {};
+
 	_cfgLootSettings = missionConfigFile >> "CfgLootSettings";
 	if (isNil "_cfgLootSettings") then {throw "invalid settings";};
 	if !(isClass _cfgLootSettings) then {throw "invalid settings";};

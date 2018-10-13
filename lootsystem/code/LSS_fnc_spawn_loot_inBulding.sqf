@@ -20,6 +20,8 @@ _result = objNull;
 
 try 
 {
+	if (!isServer) exitWith {};
+
 	if (isNil "_building") then {throw objNull;};
 	
 	_cfgLootSettings = missionConfigFile >> "CfgLootSettings";
