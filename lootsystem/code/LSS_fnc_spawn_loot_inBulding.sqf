@@ -91,7 +91,7 @@ try
 		if (isNil "_itemSpawnType") then {throw objNull;};
 		if !(_itemSpawnType in _ratios) then {throw objNull;};
 		
-		_lootContainer = createVehicle ["GroundWeaponHolder", _lootPosition, [], 0, "CAN_COLLIDE"];
+		_lootContainer = createVehicle ["WeaponHolderSimulated", _lootPosition, [], 0, "CAN_COLLIDE"];
 		_lootContainer setDir (random 360);
 		_lootContainer setPosATL _lootPosition;
 		_lootContainer setVariable ["lastSpawendLoot", _time];
